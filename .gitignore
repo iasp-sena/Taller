@@ -52,3 +52,4 @@
 **/release.properties
 **/pom.xml.releaseBackup
 **/pom.xml.tag
+**/*.mwb.bak
