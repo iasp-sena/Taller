@@ -24,10 +24,10 @@
                 </button>
                 <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
                     <ul class="navbar-nav">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="index.xhtml">Inicio <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="productos.xhtml">Productos</a>
                         </li>
                         <li class="nav-item">
@@ -53,10 +53,22 @@
             </nav>
         </h:form>
         <div id="content" class="container-fluid">
-            <h2>Bienvenido</h2>
+            <h2>Productos</h2>
             <hr/>
             <div class="p-3">
-                <p>Bienvenidos a nuestro taller ejemplo de la APP tienda</p>
+                <h:form id="formProductos" class="row">
+                    <div class="card col-3">
+                        <img src="resources/img/productos/gansito.png" class="card-img-top" alt="..."/>
+                        <div class="card-body">
+                            <h5 class="card-title">Gansito</h5>
+                            <p class="card-text">Producto de la empresa Ramo.</p>
+                            <h:commandLink class="btn btn-primary" html5:data-toggle="modal" html5:data-target="#modalAgregarProducto">
+                                <i class="fa fa-cart-plus"></i> Agregar al carrito
+                                <f:ajax execute="@this" render=":formModalAgregarProducto"/>
+                            </h:commandLink>
+                        </div>
+                    </div>
+                </h:form>
             </div>
         </div>
         <footer class="footer">
